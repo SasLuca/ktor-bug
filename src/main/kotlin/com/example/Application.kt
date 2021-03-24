@@ -24,7 +24,8 @@ fun Application.module(testing: Boolean = false)
         {
             @Serializable data class RequestInput(val data: String)
             try {
-                call.receive<RequestInput>()
+                val input = call.receive<RequestInput>()
+                println(input.data)
             }
             catch(e: Exception)
             {
