@@ -29,3 +29,5 @@ In case the case that throwing `JsonDecodingException` is the intended behaviour
 
 If you check the request from tests/http/test.http you will notice that it sends a json with a typo, the field is named "dataa" but the server expects it to be called "data".
 The json is however valid and sending invalid json also results in a `JsonDecodingException`.
+
+If the name of the field is corrected to be "data" then the code works as intended and no exception is thrown.
